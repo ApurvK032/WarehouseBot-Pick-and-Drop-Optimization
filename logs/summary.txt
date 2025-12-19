@@ -1,0 +1,100 @@
+WarehouseBot Evaluation Summary
+============================================================
+
+RANDOM_TRIALS_15X15
+------------------------------------------------------------
+  n_trials: 30
+  greedy_cost_mean: 74.1
+  greedy_cost_stdev: 14.624978632463023
+  hill_cost_mean: 66.53333333333333
+  hill_cost_stdev: 9.408270593236335
+  sa_cost_mean: 67.66666666666667
+  sa_cost_stdev: 9.206278051175488
+  hill_impr_mean: 9.027139342958607
+  hill_impr_stdev: 8.605671213845522
+  sa_impr_mean: 7.453005619909274
+  sa_impr_stdev: 8.229220209901793
+  greedy_time_mean: 0.003824644632671455
+  hill_time_mean: 0.04501567049968192
+  sa_time_mean: 0.04573780043331984
+
+BASELINE_LARGE_25X25
+------------------------------------------------------------
+  n_trials: 30
+  greedy_cost_mean: 149.26666666666668
+  greedy_cost_stdev: 20.21044834292951
+  hill_cost_mean: 135.83333333333334
+  hill_cost_stdev: 15.569378778729599
+  sa_cost_mean: 138.16666666666666
+  sa_cost_stdev: 14.069075623113584
+  hill_impr_mean: 8.348250367954298
+  hill_impr_stdev: 8.275911249939023
+  sa_impr_mean: 6.708552306731193
+  sa_impr_stdev: 7.834753968201053
+  greedy_time_mean: 0.027164923434368878
+  hill_time_mean: 0.1308598840664975
+  sa_time_mean: 0.11216096923344594
+
+SCALING_STUDY
+------------------------------------------------------------
+  Number of configurations: 18
+
+  Best Hill Climbing configuration:
+    rows=10, cols=10, obstacle_prob=0.1, n_parcels=3
+    hill_cost_mean: 27.4
+    hill_impr_pct_mean: 6.71043821896597
+
+  Best Simulated Annealing configuration:
+    rows=10, cols=10, obstacle_prob=0.1, n_parcels=3
+    sa_cost_mean: 27.266666666666666
+    sa_impr_pct_mean: 7.020515738345814
+
+ABLATION_STUDY
+------------------------------------------------------------
+  Variant summaries:
+
+  Hill_restarts=1:
+    mean_cost: 69.2
+    mean_impr_pct: 3.5178952113738244
+    mean_time: 0.001639647749470896
+
+  Hill_restarts=10:
+    mean_cost: 66.55
+    mean_impr_pct: 7.013240655102424
+    mean_time: 0.08642864510020445
+
+  SA_greedy_start:
+    mean_cost: 67.2
+    mean_impr_pct: 5.999000782166675
+    mean_time: 0.08085081150056794
+
+  SA_random_start:
+    mean_cost: 67.5
+    mean_impr_pct: 5.56411613628471
+    mean_time: 0.07663559449956665
+
+
+SA_SWEEP
+------------------------------------------------------------
+  Top 5 parameter combinations (by sa_cost_mean):
+
+  1. t0=10.0, alpha=0.999
+     sa_cost_mean: 65.2
+     sa_impr_pct_mean: 9.485827042354115
+
+  2. t0=100.0, alpha=0.999
+     sa_cost_mean: 65.4
+     sa_impr_pct_mean: 9.208049264576339
+
+  3. t0=50.0, alpha=0.999
+     sa_cost_mean: 65.6
+     sa_impr_pct_mean: 8.888265889918893
+
+  4. t0=100.0, alpha=0.995
+     sa_cost_mean: 66.46666666666667
+     sa_impr_pct_mean: 7.665636927853312
+
+  5. t0=50.0, alpha=0.995
+     sa_cost_mean: 66.66666666666667
+     sa_impr_pct_mean: 7.304314820080727
+
