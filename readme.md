@@ -136,6 +136,13 @@ The figure below is generated automatically by the project and is also used in t
 
 ![Static Comparison](images/static_comparison.png)
 
+The figure below shows a **larger random warehouse instance (30×30 grid, 20% obstacles, 8 parcels)**.
+This example demonstrates scalability and an **interleaved pickup–drop route**, where some deliveries occur
+before all pickups are completed while still respecting precedence constraints.
+
+![Large Random Warehouse (30x30)](images/random_30x30_seed42.png)
+
+
 This visualization compares route cost and runtime for all algorithms on a static warehouse instance.
 
 **Key findings:**
